@@ -26,7 +26,7 @@ $ slparse config delete
 
 Once you've set your tokens, you can install the app in your slack workspace. See [Basic app setup](https://api.slack.com/authentication/basics).
 
-_It's possible to limit requests to subsets of IP addresses. In this case, I've limited it to those within the Adobe VPN network I'm signed into. Outside IPs will not be allowed to make requests_
+_It's possible to limit requests to subsets of IP addresses. In this case, I've limited it to those within the VPN network I'm signed into. Outside IPs will not be allowed to make requests_
 
 After your app has been installed and your tokens have been stored, you are ready to start querying against your workspace.
 
@@ -83,5 +83,5 @@ Authentication - We could do better:
 
 - Slack allows for OAuth 2 so that admin users of a workspace could sign in with Slack creds to make the API requests
   - the issue is that we need a local https server to accept Slack's redirect which becomes difficult to spin up locally quickly
-- Right now, it's only allowing IP addresses within our adobe VPN IP blocks (configurable on a per-app basis)
-- Could use internal OKTA verification to obtain bot token from Vault. But for now, I will not set up OKTA for adobe since it requires approval
+- Right now, it's only allowing IP addresses within our VPN IP blocks (configurable on a per-app basis)
+- Could use internal OKTA verification to obtain bot token from Vault. But for now, I will not set up OKTA since it requires approval
