@@ -56,14 +56,24 @@ Or if you want to output JSON that groups the messages according to "backend" vs
 slparse messages -c="bugs" -f="groupByStack" --startTime="1644631325" --endTime="1644804126"
 ```
 
-You could take that output and pipe it into an new file.
+Will output:
+
+![output](src/images/output2.png)
+
+You could also take that output and pipe it into an new file using something like
+
+```
+slparse messages -c="bugs" -f="groupByStack" --startTime="1644631325" --endTime="1644804126" > ~/Desktop/results.json
+```
 
 ## `messages --help`
 
 To see all configuration options for this command, run:
 
 ```
+
 slparse messages --help
+
 ```
 
 # `Notes`
@@ -85,3 +95,11 @@ Authentication - We could do better:
   - the issue is that we need a local https server to accept Slack's redirect which becomes difficult to spin up locally quickly
 - Right now, it's only allowing IP addresses within our VPN IP blocks (configurable on a per-app basis)
 - Could use internal OKTA verification to obtain bot token from Vault. But for now, I will not set up OKTA since it requires approval
+
+Testing
+
+- The tests are fairly sparse right now. I'd fill them in for all commands and would also try and cover invalid commands
+
+```
+
+```
