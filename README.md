@@ -2,7 +2,7 @@
 
 This tool is set up for quick retrieval of Slack messages using the Slack API. It implements some simple functions to parse the messages and customize your output. Check out some examples below!
 
-# `Getting Started`
+# Getting Started
 
 Install the command as a global NPM command:
 
@@ -30,9 +30,9 @@ _It's possible to limit requests to subsets of IP addresses. In this case, I've 
 
 After your app has been installed and your tokens have been stored, you are ready to start querying against your workspace.
 
-# `Commands`
+# Commands
 
-## `messages`
+## messages
 
 Right now, the CLI tool is configured to read and parse Slack messages from specified channels.
 
@@ -66,7 +66,7 @@ You could also take that output and pipe it into an new file using something lik
 slparse messages -c="bugs" -f="groupByStack" --startTime="1644631325" --endTime="1644804126" > ~/Desktop/results.json
 ```
 
-## `messages --help`
+## messages --help
 
 To see all configuration options for this command, run:
 
@@ -76,7 +76,7 @@ slparse messages --help
 
 ```
 
-# `Notes`
+# Notes
 
 Why choose the `oclif` CLI framework?
 
@@ -99,7 +99,3 @@ Authentication - We could do better:
 Testing
 
 - The tests are fairly sparse right now. I'd fill them in for all commands and would also try and cover invalid commands
-
-```
-
-```
