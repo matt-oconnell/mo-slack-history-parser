@@ -1,6 +1,6 @@
 import { Command } from "@oclif/core";
 import chalk = require("chalk");
-import Conf from "conf";
+import configCreator from "../../core/config";
 
 export default class Config extends Command {
   static description =
@@ -13,7 +13,7 @@ export default class Config extends Command {
   ];
 
   async run(): Promise<void> {
-    const config = new Conf();
+    const config = configCreator.create();
 
     this.log(chalk.greenBright("Successfully retrieved tokens:"));
     this.log("SLACK_BOT_TOKEN", config.get("SLACK_BOT_TOKEN"));

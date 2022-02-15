@@ -1,6 +1,6 @@
 import { Command, Flags } from "@oclif/core";
 import chalk = require("chalk");
-import Conf from "conf";
+import configCreator from "../../core/config";
 
 export default class Set extends Command {
   static examples = [
@@ -26,7 +26,7 @@ export default class Set extends Command {
     const { flags } = await this.parse(Set);
     const { SLACK_BOT_TOKEN, SLACK_SIGNING_SECRET } = flags;
 
-    const config = new Conf();
+    const config = configCreator.create();
 
     config.set("SLACK_BOT_TOKEN", SLACK_BOT_TOKEN);
     config.set("SLACK_SIGNING_SECRET", SLACK_SIGNING_SECRET);

@@ -1,6 +1,6 @@
 import { Command } from "@oclif/core";
-import Conf from "conf";
 import chalk = require("chalk");
+import configCreator from "../../core/config";
 
 export default class Delete extends Command {
   static examples = [
@@ -10,7 +10,7 @@ export default class Delete extends Command {
   ];
 
   async run(): Promise<void> {
-    const config = new Conf();
+    const config = configCreator.create();
 
     config.delete("SLACK_BOT_TOKEN");
     config.delete("SLACK_SIGNING_SECRET");
