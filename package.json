@@ -19,7 +19,7 @@
   "dependencies": {
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1",
+    "@oclif/plugin-plugins": "^2.1.12",
     "@slack/bolt": "^3.9.0",
     "@slack/web-api": "^6.6.0",
     "chalk": "^4.0.0",
